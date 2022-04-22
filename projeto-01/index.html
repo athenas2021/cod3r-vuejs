@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto 1 - 1x1 desonesto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="panel scores">
+            <div class="score">
+                <h1>Jogador</h1>
+                <div class="life-bar">
+                    <div class="life"
+                    :class="{danger: playerLife < 20}"
+                    :style="{width: playerLife + '%'}"></div>
+                </div>
+                <div>{{ playerLife }}%</div>
+            </div>
+            <div class="score">
+                <h1>Inimigo</h1>
+                <div class="life-bar">
+                    <div class="life"
+                    :class="{danger: enemyLife < 20}"
+                    :style="{width: enemyLife + '%'}"></div>
+                </div>
+                <div>{{ enemyLife }}%</div>
+            </div>
+        </div>
+        <div v-if="hasResult" class="panel result">
+            <div v-if="enemyLife == 0" class="win">Você Ganhou!</div>
+            <div v-else class="lose">Você Perdeu!</div>
+        </div>
+        <div class="panel buttons">
+            <template v-if="running">
+                <button class="btn attack">Ataque</button>
+                <button class="btn especial-attack">Ataque Especial</button>
+                <button class="btn heal">Curar</button>
+                <button class="btn give-up">Desistir</button>
+            </template>
+
+            <button v-else class="btn new-game">Iniciar Jogo</button>
+        </div>
+        <div class="panel logs">4</div>
+    </div>
+    <script src="app.js"></script>    
+</body>
+</html>
