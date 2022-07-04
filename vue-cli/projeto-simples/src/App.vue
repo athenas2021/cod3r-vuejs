@@ -1,5 +1,7 @@
 <template>
-<div id="app">{{ titulo }}</div>
+<div id="app">
+  {{ titulo }}
+  </div>
 </template>
 
 <script>
