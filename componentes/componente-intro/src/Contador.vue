@@ -26,16 +26,18 @@ export default {
 }
 </script>
 
-<style>
-.contador span {
+<style scoped>
+span {
   border-bottom: 1px solid #CCC;
   height: 30px;
   padding: 5px 25px;
 }
 
-.contador button {
+button {
   height: 30px;
-  width: 30px;  
+  width: 30px;
+  border-radius: 15px;
+  color: #fff;  
   background-color: coral;
   margin-left: 10px;
   outline: none;
