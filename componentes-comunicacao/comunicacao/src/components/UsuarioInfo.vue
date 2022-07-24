@@ -8,7 +8,14 @@
 
 <script>
 export default {
-    props: ['nome']
+    props: {
+        nome: {
+            type: String,
+            default: function() {
+                return Array(10).fill(0).join(',')
+            }
+        }
+    }
 }
 </script>
 
