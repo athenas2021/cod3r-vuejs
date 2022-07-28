@@ -3,6 +3,7 @@
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
         <p>Nome do Usuário: <strong>{{ nome }}</strong></p>
+        <p>idade do Usuário: <strong>{{ idade }}</strong></p>
         <button @click="reiniciarNome">Reiniciar Nome</button>
         <button @click="reiniciarFn()">Reiniciar FN (callback)</button>
     </div>
@@ -17,7 +18,8 @@ export default {
                 return Array(10).fill(0).join(',')
             }
         },
-        reiniciarFn: Function
+        reiniciarFn: Function,
+        idade: Number
     },
     methods: {
         reiniciarNome() {
